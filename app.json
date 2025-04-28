@@ -1,11 +1,13 @@
 {
   "expo": {
+    "scheme": "your-app-scheme",
     "name": "Now-app",
     "slug": "Now-app",
     "version": "1.0.0",
     "orientation": "portrait",
+    "backgroundColor": "#121212",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -13,7 +15,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.nowapp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to show friends on a map."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +29,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-location",
+      "react-native-maps"
+    ]
   }
 }
